@@ -23,10 +23,11 @@
 
     <!-- conquerOS version -->
     <Preference
-        settings:key="conqueros_version"
-        settings:title="@string/conqueros_version_title"
-        settings:summary="@string/conqueros_version_summary"
-        settings:fragment="com.android.settings.deviceinfo.conqueros.ConquerOSVersionSettings"/>
+        android:key="conqueros_version"
+        android:title="@string/conqueros_version_title"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.conqueros.conquerOSVersionPreferenceController"/>
 
     <!-- Android version -->
     <Preference
@@ -43,14 +44,6 @@
         android:title="@string/security_patch"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
-
-<!-- Mainline module version
-    <Preference
-        android:key="module_version"
-        android:title="@string/module_version"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.MainlineModuleVersionPreferenceController"/> -->
 
     <!-- Baseband -->
     <Preference
@@ -70,13 +63,12 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"/>
 
-    <!-- Build -->
+    <!-- CAF/CLO Revisiin Tag -->
     <Preference
-        android:key="os_build_number"
-        android:title="@string/build_number"
+        android:key="caf_tag"
+        android:title="@string/caf_tag_title"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.SimpleBuildNumberPreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.conqueros.CAFTagVersionPreferenceController"/>
 
 </PreferenceScreen>
