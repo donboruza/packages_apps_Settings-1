@@ -81,6 +81,9 @@
 -keep class vendor.** { *; }
 -keep class com.android.wsuinterface.** { *; }
 
+# conquerOS Classes
+-keep class com.conquer.settings.**
+
 # For reflection
 -keepattributes InnerClasses
 -keep class **.R

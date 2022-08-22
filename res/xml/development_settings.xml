@@ -215,6 +215,12 @@
             android:title="@string/feature_flags_dashboard_title"
             android:fragment="com.android.settings.development.featureflags.FeatureFlagsDashboard" />
 
+        <Preference
+            android:key="conquer_features_dashboard"
+            android:title="@string/features_title"
+            android:summary="@string/beta_features_summary"
+            android:fragment="com.conquer.settings.features.ControlPanel" />
+
         <SwitchPreference
             android:key="enable_gpu_debug_layers"
             android:title="@string/enable_gpu_debug_layers"
